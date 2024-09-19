@@ -3,7 +3,7 @@ html {
   font-family: Inter, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -12,15 +12,10 @@ html {
   box-sizing: inherit;
 }
 
-.body {
-  position: relative;
+body {
   overflow-x: hidden;
   color: var(--neutral-color-100);
   background-color: var(--neutral-color-10);
-
-  &--fixed {
-    overflow-y: hidden;
-  }
 }
 
 img {
@@ -60,10 +55,6 @@ button {
   outline: none;
   border: none;
   background-color: transparent;
-  cursor: pointer;
-}
-
-label {
   cursor: pointer;
 }
 
