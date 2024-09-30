@@ -10,7 +10,7 @@
   }
 
   &__container {
-    @include flex-align-center-between;
+    @include flex-all-between;
     min-width: 0;
 
     @include small-tablet {
