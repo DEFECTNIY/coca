@@ -1,17 +1,18 @@
 /* eslint-disable prettier/prettier */
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
+import { Navigation, EffectFade } from 'swiper/modules';
 
 export const useTestimonialsSlider = () => {
   new Swiper('.testimonials__slider', {
-    modules: [Navigation],
+    modules: [Navigation, EffectFade],
     navigation: {
       prevEl: '.testimonials__btn--prev',
       nextEl: '.testimonials__btn--next',
     },
-    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
     slidesPerView: 'auto',
     spaceBetween: 22,
     breakpoints: {},
