@@ -1,0 +1,164 @@
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable scss/double-slash-comment-empty-line-before */
+.get-started {
+  position: relative;
+  padding: 120px 0 160px;
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-right: 0;
+    max-width: 1440px;
+
+    @include tablet {
+      padding-right: var(--container-padding);
+    }
+
+    @include small-tablet {
+      justify-content: center;
+    }
+  }
+
+  &__form {
+    @include mobile {
+      @include flex-column-all-center;
+    }
+
+    &-wrapper {
+      position: absolute;
+      left: 12%;
+      border: 1px solid var(--neutral-color-40);
+      padding: 56px 48px;
+      min-width: 608px;
+      background: #fff;
+
+      @include tablet {
+        left: var(--container-padding);
+      }
+
+      @include small-tablet {
+        position: inherit;
+        padding: 36px 28px;
+        min-width: 300px;
+      }
+
+      @include mobile {
+        max-width: 380px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 20px;
+      font-weight: 600;
+      line-height: 122%;
+      letter-spacing: -0.02em;
+      color: #1d1e25;
+    }
+
+    &-text {
+      margin-bottom: 48px;
+      font-weight: 400;
+      line-height: 167%;
+      color: var(--neutral-color-150);
+    }
+
+    &-link {
+      font-weight: 500;
+      color: #1463ff;
+    }
+
+    &-top {
+      @include flex-all-between;
+      gap: 12px;
+
+      @include mobile {
+        gap: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+    }
+
+    &-label {
+      @include flex-column;
+      position: relative;
+      margin-bottom: 24px;
+      font-weight: 500;
+      line-height: 143%;
+      color: #1d1e25;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      &-text {
+        display: inline-block;
+        margin-bottom: 6px;
+      }
+    }
+
+    &-input {
+      border: 1px solid var(--neutral-color-30);
+      border-radius: 8px;
+      padding: 10px 14px;
+      width: 100%;
+      height: 44px;
+      font-weight: 400;
+      line-height: 171%;
+      color: var(--neutral-color-150);
+
+      &-small {
+        width: 240px;
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+
+      &--textarea {
+        outline: none;
+        height: 134px;
+        resize: none;
+      }
+    }
+
+    &-btn {
+      border-radius: 100px;
+      padding: 16px 32px;
+      font-weight: 700;
+      line-height: 150%;
+      text-align: center;
+      color: #fff;
+      background: #1d1e25;
+      transition: opacity var(--transition);
+
+      @include mobile {
+        width: 100%;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &-img {
+    @include small-tablet {
+      display: none;
+    }
+  }
+}
+// Цвет в intlTelInput
+.iti__selected-dial-code,
+.iti__country-name {
+  color: #1d1e25 !important;
+}
+
+// JustValidate
+.just-validate-error-label {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  font-size: 14px;
+}
