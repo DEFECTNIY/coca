@@ -1,0 +1,233 @@
+.about {
+  padding: 235px 0 145px;
+
+  @include mobile {
+    padding: 200px 0 85px;
+  }
+
+  &__title {
+    margin-bottom: 118px;
+    max-width: 959px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include small-tablet {
+      margin-bottom: 80px;
+      text-align: center;
+    }
+  }
+
+  &-wrapper {
+    padding-bottom: 20px;
+  }
+
+  .text-p-subtitle::before {
+    transform: translateY(-83px);
+  }
+
+  &__subtitle {
+    &-wrapper {
+      @include flex-all-between;
+
+      @include small-tablet {
+        @include flex-column-all-center;
+        gap: 60px;
+      }
+
+      & br {
+        @include small-tablet {
+          display: none;
+        }
+      }
+    }
+
+    &-descr {
+      max-width: 780px;
+
+      @include small-tablet {
+        max-width: 730px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__circle {
+    @include flex-all-center;
+    position: relative;
+    border-radius: 50%;
+    width: 126px;
+    height: 126px;
+
+    &-logo {
+      svg {
+        rect {
+          fill: var(--neutral-color-100);
+        }
+      }
+    }
+
+    &-text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      animation: anim 10s linear infinite;
+
+      & span {
+        position: absolute;
+        left: 50%;
+        font-family: Roboto, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        transform-origin: 0 63px; // Размер круга 126px делить на 2
+      }
+    }
+
+    &-link {
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    width: 1320px;
+
+    @include small-mobile {
+      max-width: 100%;
+    }
+
+    &-container {
+      overflow: hidden;
+      margin-top: 135px;
+
+      @include small-tablet {
+        margin-top: 105px;
+      }
+
+      @include small-mobile {
+        margin-top: 95px;
+      }
+    }
+  }
+
+  &__slide {
+    max-width: 502px;
+    max-height: 630px;
+
+    &-title {
+      margin-top: 24px;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: var(--neutral-color-100);
+    }
+
+    &-text {
+      margin-top: 8px;
+      margin-bottom: 32px;
+      max-width: 496px;
+      font-weight: 500;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+    }
+
+    &-btn {
+      padding: 16px 32px;
+      width: 175px;
+      height: 56px;
+      color: var(--neutral-color-10);
+      background: var(--neutral-color-100);
+    }
+  }
+
+  &__btn {
+    &--next,
+    &--prev {
+      position: absolute;
+      top: 126px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 100px;
+      background-color: #fff;
+      transition: var(--transition);
+      cursor: pointer;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--next {
+      right: 57%;
+      border-radius: 0 100px 100px 0;
+
+      @include small-tablet {
+        right: 58%;
+      }
+    }
+
+    &--prev {
+      left: 35.5%;
+      border-radius: 100px 0 0 100px;
+
+      @include small-tablet {
+        left: 34.5%;
+      }
+    }
+
+    &--prev:hover,
+    &--next:hover {
+      background: var(--neutral-color-150);
+    }
+
+    &--prev svg,
+    &--next svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: var(--transition);
+    }
+
+    &--prev svg {
+      right: 5px;
+    }
+
+    &--next svg {
+      left: 5px;
+    }
+
+    &--prev svg path,
+    &--next svg path {
+      transition: var(--transition);
+    }
+
+    &--prev:hover svg path,
+    &--next:hover svg path {
+      stroke: #fff;
+    }
+  }
+}
+
+@keyframes anim {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.about__btn {
+  opacity: 1;
+  transition: opacity var(--transition) ease-in-out;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.about__btn--hidden {
+  opacity: 0;
+}

@@ -166,3 +166,12 @@
     }
   }
 }
+
+.insight__article-btn {
+  opacity: 1;
+  transition: opacity var(--transition) ease-in-out;
+}
+
+.insight__article-btn--hidden {
+  opacity: 0;
+}
