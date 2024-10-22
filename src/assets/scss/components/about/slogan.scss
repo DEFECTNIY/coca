@@ -33,3 +33,29 @@
     color: var(--neutral-color-100);
   }
 }
+
+.hero {
+  &-decors {
+    &::before {
+      content: '';
+      top: -385px;
+      left: 0;
+      border-radius: 50%;
+      width: 551px;
+      height: 551px;
+      background: #fa7515;
+      opacity: 0.2;
+      filter: blur(220px);
+    }
+
+    &::after {
+      content: '';
+      right: 0;
+      bottom: -432px;
+      width: 525px;
+      height: 525px;
+      background: var(--success-color-70);
+      filter: blur(180px);
+    }
+  }
+}

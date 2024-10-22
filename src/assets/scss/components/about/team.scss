@@ -69,6 +69,14 @@
   }
 
   &__button {
+    // Анимация исчезновения конпки в слайдере
+    opacity: 1;
+    transition: opacity var(transition) ease-in-out;
+
+    &--hidden {
+      opacity: 0;
+    }
+
     &--next,
     &--prev {
       position: absolute;
@@ -173,7 +181,6 @@
     }
 
     &-name {
-      margin-top: 16px;
       font-weight: 600;
       line-height: 150%;
       color: var(--neutral-color-100);
@@ -188,6 +195,8 @@
 
     &-items {
       @include flex-all-between;
+      gap: 10px;
+      margin-top: 16px;
     }
 
     &-socials {
@@ -203,13 +212,4 @@
       }
     }
   }
-}
-
-.team__button {
-  opacity: 1;
-  transition: opacity var(transition) ease-in-out;
-}
-
-.team__button--hidden {
-  opacity: 0;
 }
