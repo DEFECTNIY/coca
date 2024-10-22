@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import '../assets/scss/pricing.scss';
+import '/scss/pricing.scss';
 
 //components
 import { useTheme } from './components/home/theme.js';

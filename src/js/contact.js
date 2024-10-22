@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import '../assets/scss/contact-hero.scss';
+import '/scss/contact-hero.scss';
 
 //components
 import { useTheme } from './components/home/theme.js';

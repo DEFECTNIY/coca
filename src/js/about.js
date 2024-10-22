@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import '../assets/scss/about.scss';
+import '/scss/about.scss';
 
 //components
 import { useTheme } from './components/home/theme.js';

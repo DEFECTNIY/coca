@@ -2,7 +2,7 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
-import '../assets/scss/main.scss';
+import '/scss/main.scss';
 
 // components
 import { useTheme } from './components/home/theme.js';
